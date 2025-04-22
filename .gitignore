@@ -1,0 +1,30 @@
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# IntelliJ out folder
+/out/
+
+### Java ###
+*.class
+
+### Maven ###
+target/
+
+### Gradle ###
+.gradle/
+build/
+
+### Logs ###
+*.log
+
+### OS ###
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+### Others ###
+*.jar
+*.war
+*.ear
