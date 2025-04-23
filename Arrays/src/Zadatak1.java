@@ -8,11 +8,4 @@ public class Zadatak1 {
                 return "Invalid index";
             }
         }
-
-        //main funkcija
-        public static void main(String[] args){
-            int TrazeniIndex=3;
-            String ime=getName(TrazeniIndex);
-            System.out.println("Ime za dati index je->" + ime);
-        }
 }
