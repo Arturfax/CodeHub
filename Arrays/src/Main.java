@@ -45,5 +45,6 @@ public class Main {
     public static void printName(String name){
         System.out.println("Ime na datom indexu je "+ name);
     }
+
 }
 

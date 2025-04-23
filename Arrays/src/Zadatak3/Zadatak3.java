@@ -8,5 +8,6 @@ public class Zadatak3 {
             sum += number;
         }
         return sum;
+
     }
 }

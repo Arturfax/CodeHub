@@ -9,5 +9,6 @@ public class Zadatak7 {
         for (int num : array) {
             System.out.print(num + " ");
         }
+
     }
 }
