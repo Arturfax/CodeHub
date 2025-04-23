@@ -1,6 +1,6 @@
 public class Zadatak7 {
 
-    public void swapElements(int[] array){
+    public int[] swapElements(int[] array){
         for(int i = 0; i < array.length-1; i+=2){
             int temp = array[i];
             array[i] = array[i+1];
@@ -9,6 +9,6 @@ public class Zadatak7 {
         for (int num : array) {
             System.out.print(num + " ");
         }
-
+        return  array;
     }
 }

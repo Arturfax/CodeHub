@@ -5,12 +5,12 @@ public class Zadatak4 {
 
     public int[] evenPositions(int[] array){
         int size=(array.length+1)/2;
-        int[] NewArray=new int[size];
-        int j=0;
-        for (int i=0;i<array.length;i+=2){
-            NewArray[j++]=array[i];
+        int[] newArray=new int[size];
+        int newIndex=0;
+        for (int index=0;index<array.length;index+=2){
+            newArray[newIndex++]=array[index];
         }
-        return NewArray;
+        return newArray;
     }
 
 
