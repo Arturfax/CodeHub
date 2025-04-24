@@ -15,18 +15,18 @@ import java.util.Scanner;
         public static void main(String[] args) {
 
             //Input
-            Scanner sc = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a word");
-            String word = sc.nextLine();
+            String word = scanner.nextLine();
             PalindromeChecker cheker = new PalindromeChecker();
 
             if (cheker.palindromeCheck(word)) {
-                System.out.println("The word is a palindrome");
+                System.out.println("The word is a Palindrome");
             } else {
-                System.out.println("The word is not a palindrome");
+                System.out.println("The word is not a Palindrome");
             }
 
-            sc.close();
+            scanner.close();
         }
 
 
