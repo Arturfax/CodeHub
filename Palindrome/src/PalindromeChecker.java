@@ -2,36 +2,35 @@ import java.util.Scanner;
 
     public class PalindromeChecker {
 
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+        public boolean palindromeCheck(String word) {
+            String reversed="";
 
-            // Input
-            System.out.print("Enter a word: ");
-            String word = scanner.nextLine();
-
-            // Check
-            if (isPalindrome(word)) {
-                System.out.println("Yes, word is palindrome!");
-            } else {
-                System.out.println("No, word isn't palindrome.");
+            for(int index=word.length()-1;index>=0;index--) {
+                reversed+=word.charAt(index);
             }
-
-            scanner.close();
-        }
-
-        // Method to check
-        public static boolean isPalindrome(String word) {
-            String reversed = "";
-
-            // Reverse the word manually
-            for (int i = word.length() - 1; i >= 0; i--) {
-                reversed += word.charAt(i);
-            }
-
             return word.equalsIgnoreCase(reversed);
-        }
-    }
 
+
+        }
+        public static void main(String[] args) {
+
+            //Input
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a word");
+            String word = sc.nextLine();
+            PalindromeChecker cheker = new PalindromeChecker();
+
+            if (cheker.palindromeCheck(word)) {
+                System.out.println("The word is a palindrome");
+            } else {
+                System.out.println("The word is not a palindrome");
+            }
+
+            sc.close();
+        }
+
+
+    }
 
 
 
