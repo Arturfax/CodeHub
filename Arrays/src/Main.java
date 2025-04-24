@@ -35,11 +35,11 @@ public class Main {
 
         Zadatak7 zadatak7 = new Zadatak7();
         System.out.println("\nZamenjeni redosled niza");
-        zadatak7.swapElements(array);
+        zadatak2.print(zadatak7.swapElements(array));
 
         Zadatak8 zadatak8 = new Zadatak8();
         System.out.println("\nSortiran redosled niza");
-        zadatak8.sortArray(array2);
+        zadatak2.print(zadatak8.sortArray(array2));
             }
 
     public static void printName(String name){

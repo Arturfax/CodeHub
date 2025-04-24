@@ -6,9 +6,7 @@ public class Zadatak7 {
             array[i] = array[i+1];
             array[i+1] = temp;
         }
-        for (int num : array) {
-            System.out.print(num + " ");
-        }
+
         return  array;
     }
 }

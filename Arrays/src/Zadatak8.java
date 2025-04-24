@@ -13,9 +13,7 @@ public class Zadatak8 {
                 }
             }
         }
-        for (int value : array) {
-            System.out.print(value + " ");
-        }
+
         return array;
     }
 }
