@@ -40,6 +40,7 @@ public class Main {
         Zadatak8 zadatak8 = new Zadatak8();
         System.out.println("\nSortiran redosled niza");
         zadatak8.sortArray(array2);
+        
             }
 
     public static void printName(String name){
