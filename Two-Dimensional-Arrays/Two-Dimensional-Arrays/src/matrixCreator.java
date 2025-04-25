@@ -14,7 +14,7 @@ public class matrixCreator {
                 if(index ==0 || j==0 ){
                     createdMatrix[index][j] = 1;
                 }else {
-                    createdMatrix[index][j] = index * j;
+                    createdMatrix[index][j] = index + j;
                 }
             }
         }
