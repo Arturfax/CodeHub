@@ -19,7 +19,7 @@ public class Main {
         int rowToAverage = scanner.nextInt();
         //-1 because computer counts from 0
         int realRowToAverage = rowToAverage-1;
-        // Zadatak 2: Calculate average value of selected row
+        // Zadatak 3: Calculate average value of selected row
         averageValue avgCalculator = new averageValue();
         double average = avgCalculator.calculateAverageOfRow(realRowToAverage, numberRows, numberColumns);
 
@@ -27,6 +27,11 @@ public class Main {
             System.out.println("Average of row " + realRowToAverage + " is: " + average);
         }
 
+        //Zadatak 4 Printing the numbers on the Main diagonal of Matrix
+        if(numberRows==numberColumns) {
+            numbersOnDiagonal diag = new numbersOnDiagonal();
+            diag.printMainDiagonal(numberRows, numberColumns);
+        }
         scanner.close();
     }
 }

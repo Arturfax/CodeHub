@@ -13,7 +13,6 @@ public class averageValue {
         for (int value : matrix[rowIndex]) {
             sum += value;
         }
-
         return (double) sum / numberColumns;
     }
 }

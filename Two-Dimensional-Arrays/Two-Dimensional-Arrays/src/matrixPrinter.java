@@ -10,7 +10,6 @@ public class matrixPrinter {
             for(int[] row: matrix){
                 for(int value: row) {
                     System.out.print(value + "\t");
-
                 }
                 System.out.println();
             }

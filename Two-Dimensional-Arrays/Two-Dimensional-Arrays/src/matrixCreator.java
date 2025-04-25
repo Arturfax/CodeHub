@@ -18,7 +18,6 @@ public class matrixCreator {
                 }
             }
         }
-
         return createdMatrix;
     }
 }
