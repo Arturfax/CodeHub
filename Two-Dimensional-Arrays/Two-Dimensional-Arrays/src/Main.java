@@ -33,5 +33,7 @@ public class Main {
             diag.printMainDiagonal(numberRows, numberColumns);
         }
         scanner.close();
+
+        
     }
 }
