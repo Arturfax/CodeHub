@@ -5,7 +5,7 @@ public class Main {
 
         //Zadatak1 printing Two-Dimensional-Array
         matrixPrinter  twoDimensionalArray = new matrixPrinter();
-        twoDimensionalArray.printMatrix(4,4);
+        twoDimensionalArray.printMatrix(6,6);
 
 
 

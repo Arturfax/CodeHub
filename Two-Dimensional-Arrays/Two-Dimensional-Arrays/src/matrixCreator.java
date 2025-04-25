@@ -8,7 +8,12 @@ public class matrixCreator {
         //fill the matrix with values
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                createdMatrix[i][j] = i * j;
+                //makes the first column and row start from the numner 1
+                if(i==0 || j==0 ){
+                    createdMatrix[i][j] = 1;
+                }else {
+                    createdMatrix[i][j] = i * j;
+                }
             }
         }
 
