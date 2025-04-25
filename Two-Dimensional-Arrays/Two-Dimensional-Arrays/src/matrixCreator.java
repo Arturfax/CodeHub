@@ -1,18 +1,20 @@
 //Zadatak 2
 
 public class matrixCreator {
+
+
     //creates and returns a 2D array
-    public int[][] create2DArray(int rows, int columns) {
-        int[][] createdMatrix = new int[rows][columns];
+    public int[][] create2DArray( int numberRows,int inputColumns) {
+        int[][] createdMatrix = new int[numberRows][inputColumns];
 
         //fill the matrix with values
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+        for (int index = 0; index < numberRows; index++) {
+            for (int j = 0; j < inputColumns; j++) {
                 //makes the first column and row start from the numner 1
-                if(i==0 || j==0 ){
-                    createdMatrix[i][j] = 1;
+                if(index ==0 || j==0 ){
+                    createdMatrix[index][j] = 1;
                 }else {
-                    createdMatrix[i][j] = i * j;
+                    createdMatrix[index][j] = index * j;
                 }
             }
         }

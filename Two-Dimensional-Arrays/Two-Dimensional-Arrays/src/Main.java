@@ -1,14 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        //Zadatak1 printing Two-Dimensional-Array
-        matrixPrinter  twoDimensionalArray = new matrixPrinter();
-        twoDimensionalArray.printMatrix(6,6);
+        // Input number of rows
+        System.out.println("Enter number of Rows and Columns to build an Matrix");
+        int numberRows = scanner.nextInt();
+        int numberColumns = scanner.nextInt();
 
+        // Zadatak 1: Print the matrix
+        matrixPrinter twoDimensionalArray = new matrixPrinter();
+        twoDimensionalArray.printMatrix(numberRows, numberColumns);
 
+        // Input row number for average
+        System.out.println("Enter the number of a Row to calculate the average:");
+        int rowToAverage = scanner.nextInt();
+        //-1 because computer counts from 0
+        int realRowToAverage = rowToAverage-1;
+        // Zadatak 2: Calculate average value of selected row
+        averageValue avgCalculator = new averageValue();
+        double average = avgCalculator.calculateAverageOfRow(realRowToAverage, numberRows, numberColumns);
 
+        if (average != -1) {
+            System.out.println("Average of row " + realRowToAverage + " is: " + average);
+        }
 
+        scanner.close();
     }
 }
