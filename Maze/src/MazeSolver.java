@@ -65,7 +65,8 @@ public class MazeSolver {
             if(dfs(maze,newRow,newCol,path,visited)){
                 return true;
             }
-        }//back track if no path found
+        }
+        //back track if no path found
         path.remove(path.size()-1);
         return false;
     }
