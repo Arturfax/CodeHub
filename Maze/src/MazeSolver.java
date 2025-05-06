@@ -4,11 +4,7 @@ public class MazeSolver {
 
     int[][] directions = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // right, down, left, up
 
-    public static void main(String[] args) {
-        new MazeSolver().runSolver(); // Just call the non-static method
-    }
-
-    private void runSolver() {
+    protected void runSolver() {
         int[][] myMaze = {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
