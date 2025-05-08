@@ -69,12 +69,16 @@ public class LinkedList<T extends Number> {
     }
 
     public void printList() {
+        System.out.println();
         Node current = head;
+        if(current == null){
+            System.out.println("List is empty");
+        }
         while (current != null) {
             System.out.print(current.data + " -> ");
             current = current.next;
         }
-        System.out.println("null");
+
     }
 
     public void addAtPosition(int position, T value) {
@@ -127,9 +131,20 @@ public class LinkedList<T extends Number> {
 
             return sum / count;
         }
+        public void clearList(){
+        head = null;
+        }
+
+        /*public void compareElements(int firstNumber, int secondNumber) {
+        Node current = head;
+        if(firstNumber == secondNumber){
+            System.out.println("Elements are equal");
+
+        }*/
 
 
-    }
+        }
+}
 
 
 

@@ -5,20 +5,53 @@ public class Main {
 
      public static void main(String[] args) {
             LinkedList list = new LinkedList<>();
-            list.add(10);
-            list.add(20);
-            list.add(30);
-
-            list.printList(); // Output: 10 -> 20 -> 30 -> null
-
-            list.removeAtPosition(2);
-            list.printList(); // Output: 10 -> 30 -> null
-
-            list.addAtPosition(2,77);
+           //Test Case 1
+            list.add(45);list.add(2);list.add(2);list.add(4);list.add(58);
             list.printList();
-            System.out.println("Element at index 1: " + list.get(1));
+            // Output 45,2,2,4,58
+            list.clearList();
+
+            //Test Case 2
+            list.add(45);list.add(5);
+            list.printList();
+            list.clearList();
+
+
+            // Test Case 3 not adding to list
+            list.printList();
+
+            //TEST CASES ADDING TO POSITION
+
+            //test case 1
+            list.add(5);list.add(3);list.add(2);list.add(1);
+            list.addAtPosition (2, 6);
+            list.printList();
+            list.clearList();
+
+            //test case 2
+            list.add(5);list.add(3);list.add(2);list.add(1);
+            list.addAtPosition (0, 6);
+            list.printList();
+            list.clearList();
+            //test case 3
+            list.addAtPosition (0, 6);
+            list.printList();
+            list.clearList();
+            //test case 4
+            list.add(5);list.add(3);list.add(2);list.add(1);
+            list.addAtPosition (0, 23);
+            list.printList();
+            list.addAtPosition (0, 6);
+            list.printList();
+            list.clearList();
+
+            //TEST CASES REMOVING NUMBERS FROM POSITION
+
+
+
+           /* System.out.println("Element at index 1: " + list.get(1));
             System.out.print("Average of List is: ");
-            System.out.printf("%.2f" , list.averageOfList());
+            System.out.printf("%.2f" , list.averageOfList());*/
         }
     }
 
