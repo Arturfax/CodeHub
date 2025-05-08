@@ -16,7 +16,9 @@ public class Main {
 
             list.addAtPosition(2,77);
             list.printList();
-            System.out.println("Element at index 1: " + list.get(1)); // Output: 30
+            System.out.println("Element at index 1: " + list.get(1));
+            System.out.print("Average of List is: ");
+            System.out.printf("%.2f" , list.averageOfList());
         }
     }
 

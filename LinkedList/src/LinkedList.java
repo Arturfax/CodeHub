@@ -1,4 +1,4 @@
-public class LinkedList<T> {
+public class LinkedList<T extends Number> {
 
     private class Node {
         T data;
@@ -109,4 +109,27 @@ public class LinkedList<T> {
     }
 
 
-}
+        public double averageOfList() {
+            if (head == null) {
+                System.out.println("List is empty.");
+                return 0;
+            }
+
+            Node current = head;
+            double sum = 0;
+            int count = 0;
+
+            while (current != null) {
+                sum += current.data.doubleValue(); // Convert T to double
+                count++;
+                current = current.next;
+            }
+
+            return sum / count;
+        }
+
+
+    }
+
+
+
