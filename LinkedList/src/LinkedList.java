@@ -108,20 +108,5 @@ public class LinkedList<T> {
         current.next = newNode;
     }
 
-    public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(10);
-        list.add(20);
-        list.add(30);
 
-        list.printList();
-
-        list.addAtPosition(1, 15);
-        list.printList();
-
-        list.removeAtPosition(2);
-        list.printList();
-
-        System.out.println("Element at index 1: " + list.get(1));
-    }
 }
