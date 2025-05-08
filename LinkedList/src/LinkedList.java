@@ -46,7 +46,7 @@ public class LinkedList<T extends Number> {
         }
 
         if (current == null || current.next == null) {
-            System.out.println("Position out of bounds");
+            System.out.println("\nCan't delete done, because node at that position doesn't exist");
             return;
         }
 
@@ -140,10 +140,10 @@ public class LinkedList<T extends Number> {
         if(firstNumber == secondNumber){
             System.out.println("Elements are equal");
 
-        }*/
-
-
         }
+
+
+        }*/
 }
 
 
