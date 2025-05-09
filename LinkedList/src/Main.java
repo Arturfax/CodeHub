@@ -95,9 +95,10 @@ public class Main {
             System.out.println("\nAverage of list is -> "+list.averageOfList());
             list.addAtPosition(4,6);
             System.out.println("\nAverage of list is -> "+list.averageOfList());
+
             list.clearList();
 
-            
+
         }
     }
 

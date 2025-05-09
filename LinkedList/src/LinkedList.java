@@ -53,7 +53,7 @@ public class LinkedList<T extends Number> {
         current.next = current.next.next;
     }
 
-    public T get(int index) {
+    public T get(int index) {//is going to be implemented for method Search for Node
         Node current = head;
         int count = 0;
 
@@ -143,7 +143,18 @@ public class LinkedList<T extends Number> {
         }
 
 
-        }*/
+        }
+        public void searchForTheNode(int numberOfNode){
+        }
+
+        public void greaterThanGivenValue(int value){
+        }
+
+        public void sortList(){
+        }
+
+
+         */
 }
 
 
