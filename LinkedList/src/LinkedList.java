@@ -53,7 +53,7 @@ public class LinkedList<T extends Number> {
         current.next = current.next.next;
     }
 
-    public T get(int index) {//is going to be implemented for method Search for Node
+   /* public T get(int index) {//is going to be implemented for method Search for Node
         Node current = head;
         int count = 0;
 
@@ -66,7 +66,7 @@ public class LinkedList<T extends Number> {
         }
 
         throw new IndexOutOfBoundsException("Index: " + index);
-    }
+    }*/
 
     public void printList() {
         System.out.println();
@@ -135,12 +135,44 @@ public class LinkedList<T extends Number> {
         head = null;
         }
 
-        /*public void compareElements(int firstNumber, int secondNumber) {
-        Node current = head;
-        if(firstNumber == secondNumber){
-            System.out.println("Elements are equal");
+        public void compareElements(int firstNumber, int secondNumber) {
 
+         boolean found1 = false;
+         boolean found2 = false;
+
+         Node current = head;
+
+                         // Traverse the list to check for the presence of both values
+        while (current != null) {
+            if (current.data.equals(firstNumber)) {
+                found1 = true;
+            }
+            if (current.data.equals(secondNumber)) {
+                found2 = true;
+            }
+            current = current.next;
         }
+
+    if (!found1 || !found2) {
+        System.out.println("One or both values not found in the list.");
+        return;
+    }
+
+    // Both values are found, now compare them
+        double d1 = firstNumber;
+        double d2 = secondNumber;
+
+    if (d1 > d2) {
+        System.out.println("First number is greater than second number");
+    } else if (d1 < d2) {
+        System.out.println("Second number is greater than first number");
+    } else {
+        System.out.println("The numbers are equal");
+    }
+}
+
+
+        /*
 
 
         }

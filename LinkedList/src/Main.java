@@ -98,6 +98,34 @@ public class Main {
 
             list.clearList();
 
+            //TEST CASES COMPARING ELEMENTS
+            //test case 1
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.compareElements(2,3);
+            list.clearList();
+
+            //test case 2
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.compareElements(3,2);
+            list.clearList();
+
+            //test case 3
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.compareElements(3,3);
+            list.clearList();
+
+            //test case 4
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.compareElements(3,33);
+            list.clearList();
+
+            //test case 5
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.compareElements(2,3);
+            list.add(6);
+            list.compareElements(6,5);
+            list.clearList();
+
 
         }
     }
