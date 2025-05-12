@@ -52,21 +52,7 @@ public class LinkedList<T extends Number> {
 
         current.next = current.next.next;
     }
-
-   /* public T get(int index) {//is going to be implemented for method Search for Node
-        Node current = head;
-        int count = 0;
-
-        while (current != null) {
-            if (count == index) {
-                return current.data;
-            }
-            count++;
-            current = current.next;
-        }
-
-        throw new IndexOutOfBoundsException("Index: " + index);
-    }*/
+    
 
     public void printList() {
         System.out.println();
@@ -171,23 +157,37 @@ public class LinkedList<T extends Number> {
     }
 }
 
-
-        /*
-
-
+    public void greaterThanGivenValue(int value){
+        Node current = head;
+        int counter=0;
+        System.out.println();//ads space between test cases
+        while (current != null) {
+            if (current.data.doubleValue() > value) {
+                System.out.print(current.data+" is greater than " + value+", ");
+                counter++;
+            }
+            current = current.next;
+            if (current == null && counter == 0) {//it prints cant find greater than only if no previous number was found
+                System.out.println("Can't find greater than " + value);
+            }
+            }
         }
         public void searchForTheNode(int numberOfNode){
+            Node current = head;
+            int index = 0;
+            int counter = 0;
+            while (current != null) {
+                index++;
+                if (current.data.equals(numberOfNode)) {
+                    System.out.println("Node is found at  "+index+" Position ");
+                    counter++;
+                }
+                current = current.next;
+                if(current == null && counter == 0){
+                    System.out.println("Node does not exist");
+                }
+            }
         }
 
-        public void greaterThanGivenValue(int value){
-        }
 
-        public void sortList(){
-        }
-
-
-         */
 }
-
-
-

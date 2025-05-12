@@ -5,6 +5,7 @@ public class Main {
 
      public static void main(String[] args) {
             LinkedList list = new LinkedList<>();
+
            //Test Case 1
             list.add(45);list.add(2);list.add(2);list.add(4);list.add(58);
             list.printList();
@@ -127,6 +128,46 @@ public class Main {
             list.clearList();
 
 
+            //Test Cases Greater Than Given Number
+               //test case 1
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.greaterThanGivenValue(3);
+            list.clearList();
+
+            //test case 2
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.greaterThanGivenValue(33);
+            list.clearList();
+
+            //test case 3
+            list.add(4);list.add(3);list.add(1);list.add(2);list.add(5);
+            list.greaterThanGivenValue(3);
+            list.clearList();
+
+            //test case 4
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.greaterThanGivenValue(3);
+            list.addAtPosition(4,6);
+            list.greaterThanGivenValue(3);
+            list.clearList();
+
+            //Test cases SEARCH FOR NODE IN LIST
+            //test case 1
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.searchForTheNode(3);
+            list.clearList();
+
+            //test case 2
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.searchForTheNode(-11);
+            list.clearList();
+
+            //test case 3
+            list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
+            list.searchForTheNode(2);
+            list.addAtPosition(1,6);
+            list.searchForTheNode(2);
+            list.clearList();
         }
     }
 
