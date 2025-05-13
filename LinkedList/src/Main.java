@@ -1,12 +1,10 @@
 
-import java.util.*;
-
 public class Main {
 
      public static void main(String[] args) {
             LinkedList list = new LinkedList<>();
 
-           //Test Case 1
+           /*//Test Case 1
             list.add(45);list.add(2);list.add(2);list.add(4);list.add(58);
             list.printList();
             // Output 45,2,2,4,58
@@ -168,6 +166,68 @@ public class Main {
             list.addAtPosition(1,6);
             list.searchForTheNode(2);
             list.clearList();
+
+            //TEST CASES SORTING LINKED LIST
+
+            //test case 1
+            list.add(2);list.add(4);list.add(3);list.add(1);list.add(5);
+            System.out.println("Before Sorting");
+            list.printList();
+            SortedLinkedList.sortList(list);
+            System.out.println("\nAfter Sorting");
+            list.printList();
+            list.clearList();
+
+            //test case 2
+            list.add(2);list.add(4);list.add(3);list.add(1);list.add(5);
+            list.addAtPosition(0,6);
+            System.out.println("\nBefore Sorting");
+            list.printList();
+            SortedLinkedList.sortList(list);
+            System.out.println("\nAfter Sorting");
+            list.printList();
+            list.clearList();
+
+            //test case 3
+            list.add(2);list.add(4);list.add(3);list.add(1);list.add(5);
+            list.addAtPosition(0,6);
+            list.addAtPosition(1,7);
+            System.out.println("\nBefore Sorting");
+            list.printList();
+            SortedLinkedList.sortList(list);
+            System.out.println("\nAfter Sorting");
+            list.printList();
+            list.clearList();*/
+
+            //Sorted Linked List TEST CASES part 2
+            //test 1
+            list.add(10);list.add(9);list.add(8);list.add(7);list.add(6);list.add(5);
+            list.add(4);list.add(3);list.add(2);list.add(1);
+            SortedLinkedList.sortList(list);
+            list.printList();
+            list.clearList();
+
+            //test 2
+            list.add(-1);list.add(0);list.add(-2);list.add(3);list.add(4);list.add(5);
+            SortedLinkedList.sortList(list);
+            list.printList();
+            list.clearList();
+
+            //test 3
+            list.add(100);list.add(4);list.add(-100);list.add(0);list.add(4);
+            SortedLinkedList.sortList(list);
+            list.printList();
+            list.clearList();
+
+            //test 4
+            list.add(0);list.add(5);list.add(0);
+            SortedLinkedList.sortList(list);
+            list.printList();
+            list.clearList();
+
+
+
+
         }
     }
 

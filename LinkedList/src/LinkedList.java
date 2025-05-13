@@ -1,6 +1,6 @@
 public class LinkedList<T extends Number> {
 
-    private class Node {
+    protected class Node {
         T data;
         Node next;
 
@@ -10,7 +10,7 @@ public class LinkedList<T extends Number> {
         }
     }
 
-    private Node head;
+    protected Node head;
 
     public void add(T data) {
         Node newNode = new Node(data);
@@ -52,7 +52,7 @@ public class LinkedList<T extends Number> {
 
         current.next = current.next.next;
     }
-    
+
 
     public void printList() {
         System.out.println();
