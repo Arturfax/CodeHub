@@ -9,20 +9,21 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
         }
     }
 
-    private DoublyNode head;
     private DoublyNode tail;
 
     @Override
-    public void add(T data) {//adding element to the end of list
+    public void add(T data) {
         DoublyNode newNode = new DoublyNode(data);
 
         if (head == null) {
-            head = tail = newNode;
+            head = newNode;
+            tail = newNode;
             return;
         }
 
-        tail.next = newNode;
-        newNode.prev = tail;
+        DoublyNode currentTail = (DoublyNode) tail;
+        currentTail.next = newNode;
+        newNode.prev = currentTail;
         tail = newNode;
     }
 
@@ -33,7 +34,7 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
             return;
         }
 
-        DoublyNode current = head;
+        DoublyNode current = (DoublyNode) head;
         int index = 0;
 
         while (current != null && index < position) {
@@ -46,7 +47,7 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
             return;
         }
 
-        if (current == head) head = (DoublyNode) current.next;
+        if (current == head) head = current.next;
         if (current == tail) tail = current.prev;
 
         if (current.prev != null) current.prev.next = current.next;
@@ -64,13 +65,13 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
 
         if (position == 0) {
             newNode.next = head;
-            if (head != null) head.prev = newNode;
+            if (head != null) ((DoublyNode) head).prev = newNode;
             head = newNode;
-            if (tail == null) tail = head;
+            if (tail == null) tail = newNode;
             return;
         }
 
-        DoublyNode current = head;
+        DoublyNode current = (DoublyNode) head;
         int index = 0;
 
         while (current != null && index < position - 1) {
@@ -99,11 +100,30 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
             return;
         }
 
-        DoublyNode current = head;
+        DoublyNode current = (DoublyNode) head;
         while (current != null) {
             System.out.print(current.data + " <-> ");
             current = (DoublyNode) current.next;
         }
         System.out.println("null");
+    }
+
+    @Override
+    public double averageOfList() {
+        double sum = 0;
+        int count = 0;
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return 0;
+        }
+
+        DoublyNode current = (DoublyNode) head;
+        while (current != null) {
+            sum += current.data.doubleValue();
+            count++;
+            current = (DoublyNode) current.next;
+        }
+        return sum/count;
     }
 }
