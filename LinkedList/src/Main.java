@@ -197,7 +197,7 @@ public class Main {
             SortedLinkedList.sortList(list);
             System.out.println("\nAfter Sorting");
             list.printList();
-            list.clearList();*/
+            list.clearList();
 
             //Sorted Linked List TEST CASES part 2
             //test 1
@@ -224,7 +224,57 @@ public class Main {
             list2.add(0);list2.add(5);list2.add(0);
             list2.sortList();
             list2.printList();
-            list2.clearList();
+            list2.clearList();*/
+
+            DoublyLinkedList<Integer> list3 = new DoublyLinkedList<>();
+            System.out.println("== INSERT START & END ==");
+            list3.add(3);
+            list3.add(5);
+            list3.add(2);
+            list3.add(7);
+            list3.printList(); // Expected: 2 3 5 7 END
+            // DoubleLinkedList.Node node=list.getNode(10);*/
+/*
+            System.out.println("== INSERT AT POSITION ==");
+            list.Insert(4, 2); // Insert 4 at index 2
+            list.display(); // Expected: 2 3 4 5 7 END
+
+            System.out.println("== DELETE FROM START ==");
+            list.deleteFromStart();
+            list.display(); // Expected: 3 4 5 7 END
+
+            System.out.println("== DELETE FROM END ==");
+            list.deleteFromEnd();
+            list.display(); // Expected: 3 4 5 END
+
+            System.out.println("== DELETE AT INDEX 1 ==");
+            list.delete(1); // Remove 4
+            list.display(); // Expected: 3 5 END
+
+            System.out.println("== AVERAGE ==");
+            double avg = list.average();
+            System.out.println("Average: " + avg); // Expected: 4.0
+
+            System.out.println("== GET INDEX OF VALUE ==");
+            int index = list.getIndex(5);
+            System.out.println("Index of 5: " + index); // Expected: 1
+
+            System.out.println("== COMPARE NODES (0 vs 1) ==");
+            int maxIndex = list.compareNodes(0, 1);
+            System.out.println("Greater node index: " + maxIndex); // Expected: 1
+
+            System.out.println("== DISPLAY > 3 ==");
+            list.displayGraterthan(3); // Expected: 5 END
+
+            System.out.println("== ADDITIONAL INSERTIONS ==");
+            list.InsertEnd(10);
+            list.InsertEnd(12);
+            list.InsertEnd(1);
+            list.display(); // Expected: 3 5 10 12 1 END
+
+            System.out.println("== DISPLAY > 6 ==");
+            list.displayGraterthan(6); // Expected: 10 12 END
+*/
 
         }
     }
