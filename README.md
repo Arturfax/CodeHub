@@ -1,2 +1,2 @@
 # CodeHub
-Uradjenji zadaci i projekti za firmu CodeHub
+Uradjeni zadaci i projekti za firmu CodeHub
