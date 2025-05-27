@@ -1,4 +1,4 @@
-public class SortedLinkedList<T extends Number & Comparable<T>> extends LinkedList<T> {
+public class SortedLinkedList extends LinkedList {
 
     public void sortList() {
         this.head = mergeSort(this.head);

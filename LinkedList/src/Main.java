@@ -2,7 +2,7 @@
 public class Main {
 
      public static void main(String[] args) {
-            LinkedList list = new LinkedList<>();
+            LinkedList list = new LinkedList();
 
            /*//Test Case 1
             list.add(45);list.add(2);list.add(2);list.add(4);list.add(58);
@@ -100,29 +100,35 @@ public class Main {
             //TEST CASES COMPARING ELEMENTS
             //test case 1
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.compareElements(2,3);
+            int result = list.compareElements(2,3);
+            list.printComparedElements(result);
             list.clearList();
 
             //test case 2
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.compareElements(3,2);
+            result=list.compareElements(3,2);
+            list.printComparedElements(result);
             list.clearList();
 
             //test case 3
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.compareElements(3,3);
+            result =list.compareElements(3,3);
+            list.printComparedElements(result);
             list.clearList();
 
             //test case 4
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.compareElements(3,33);
+            result= list.compareElements(3,33);
+            list.printComparedElements(result);
             list.clearList();
 
             //test case 5
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.compareElements(2,3);
+            result=list.compareElements(2,3);
+            list.printComparedElements(result);
             list.add(6);
-            list.compareElements(6,5);
+            result=list.compareElements(6,5);
+            list.printComparedElements(result);
             list.clearList();
 
 
@@ -147,26 +153,33 @@ public class Main {
             list.greaterThanGivenValue(3);
             list.addAtPosition(4,6);
             list.greaterThanGivenValue(3);
-            list.clearList();
+            list.clearList();*/
 
             //Test cases SEARCH FOR NODE IN LIST
-            //test case 1
+           //test case 1
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.searchForTheNode(3);
+            int node=list.searchForTheNode(3);
+            list.printingNodes(node,42);
             list.clearList();
 
             //test case 2
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.searchForTheNode(-11);
+            node=list.searchForTheNode(-11);
+            list.printingNodes(node,-11);
             list.clearList();
 
             //test case 3
             list.add(1);list.add(2);list.add(3);list.add(4);list.add(5);
-            list.searchForTheNode(2);
+            node=list.searchForTheNode(2);
+            list.printingNodes(node,2);
             list.addAtPosition(1,6);
-            list.searchForTheNode(2);
+            node=list.searchForTheNode(2);
+            list.printingNodes(node,2);
             list.clearList();
 
+
+
+/*
             //TEST CASES SORTING LINKED LIST
 
             //test case 1
@@ -199,7 +212,7 @@ public class Main {
             list.printList();
             list.clearList();*/
 
-            //Sorted Linked List TEST CASES part 2
+           /* //Sorted Linked List TEST CASES part 2
             //test 1
             SortedLinkedList list2 = new SortedLinkedList();//new object using SortedLinkedList
             list2.add(10);list2.add(9);list2.add(8);list2.add(7);list2.add(6);list2.add(5);
@@ -224,7 +237,7 @@ public class Main {
             list2.add(0);list2.add(5);list2.add(0);
             list2.sortList();
             list2.printList();
-            list2.clearList();
+            list2.clearList();*/
 
         }
     }
