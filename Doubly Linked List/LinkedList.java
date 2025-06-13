@@ -1,10 +1,10 @@
-public class LinkedList<T extends Number> {
+public class LinkedList {
 
     protected class Node {
-        T data;
+        Integer data;
         Node next;
 
-        Node(T data) {
+        Node(Integer data) {
             this.data = data;
             this.next = null;
         }
@@ -12,7 +12,11 @@ public class LinkedList<T extends Number> {
 
     protected Node head;
 
-    public void add(T data) {
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void add(Integer data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -46,28 +50,27 @@ public class LinkedList<T extends Number> {
         }
 
         if (current == null || current.next == null) {
-            System.out.println("\nCan't delete done, because node at that position doesn't exist");
+            System.out.println("\nCan't delete, node at that position doesn't exist");
             return;
         }
 
         current.next = current.next.next;
     }
 
-
     public void printList() {
         System.out.println();
         Node current = head;
-        if(current == null){
+        if (current == null) {
             System.out.println("List is empty");
+            return;
         }
         while (current != null) {
             System.out.print(current.data + " -> ");
             current = current.next;
         }
-
     }
 
-    public void addAtPosition(int position, T value) {
+    public void addAtPosition(int position, Integer value) {
         Node newNode = new Node(value);
 
         if (position < 0) {
@@ -98,37 +101,54 @@ public class LinkedList<T extends Number> {
         current.next = newNode;
     }
 
-
-        public double averageOfList() {
-            if (head == null) {
-                System.out.println("List is empty.");
-                return 0;
-            }
-
-            Node current = head;
-            double sum = 0;
-            int count = 0;
-
-            while (current != null) {
-                sum += current.data.doubleValue(); // Convert T to double
-                count++;
-                current = current.next;
-            }
-
-            return sum / count;
+    public double averageOfList() {
+        if (head == null) {
+            System.out.println("List is empty.");
+            return 0;
         }
-        public void clearList(){
+
+        Node current = head;
+        double sum = 0;
+        int count = 0;
+
+        while (current != null) {
+            sum += current.data;
+            count++;
+            current = current.next;
+        }
+
+        return sum / count;
+    }
+
+    public void clearList() {
         head = null;
+    }
+    public void printComparedElements( int compareElements) {
+        switch(compareElements){
+            case 100://values not found
+                System.out.println("One or both values not found in the list.");
+                break;
+            case 101: //first number greater
+                System.out.println("First number is greater than second number");
+                break;
+
+            case 102://Second number greater
+                System.out.println("Second number is greater than first number");
+                break;
+            case 103://elements are equal
+                System.out.println("Numbers are equal");
+                break;
+            default:
+                System.out.println("Invalid compare elements");
+                break;
         }
+    }
+    public int compareElements(int firstNumber, int secondNumber) {
+        boolean found1 = false;
+        boolean found2 = false;
 
-        public void compareElements(int firstNumber, int secondNumber) {
+        Node current = head;
 
-         boolean found1 = false;
-         boolean found2 = false;
-
-         Node current = head;
-
-                         // Traverse the list to check for the presence of both values
         while (current != null) {
             if (current.data.equals(firstNumber)) {
                 found1 = true;
@@ -139,55 +159,61 @@ public class LinkedList<T extends Number> {
             current = current.next;
         }
 
-    if (!found1 || !found2) {
-        System.out.println("One or both values not found in the list.");
-        return;
+        if (!found1 || !found2) {
+            return 100;
+        }
+
+        if (firstNumber > secondNumber) {
+            return 101;
+        } else if (firstNumber < secondNumber) {
+            return 102;
+        } else {
+            return 103;
+        }
+
     }
 
-    // Both values are found, now compare them
-        double d1 = firstNumber;
-        double d2 = secondNumber;
-
-    if (d1 > d2) {
-        System.out.println("First number is greater than second number");
-    } else if (d1 < d2) {
-        System.out.println("Second number is greater than first number");
-    } else {
-        System.out.println("The numbers are equal");
-    }
-}
-
-    public void greaterThanGivenValue(int value){
+    public LinkedList greaterThanGivenValue(int value) {
+        LinkedList greaterValues = new LinkedList();
         Node current = head;
-        int counter=0;
-        System.out.println();//ads space between test cases
+        System.out.println(); // Adds space between test cases
+
         while (current != null) {
-            if (current.data.doubleValue() > value) {
-                System.out.print(current.data+" is greater than " + value+", ");
-                counter++;
+            if (current.data > value) {
+                greaterValues.add(current.data);
             }
             current = current.next;
-            if (current == null && counter == 0) {//it prints cant find greater than only if no previous number was found
-                System.out.println("Can't find greater than " + value);
-            }
-            }
-        }
-        public void searchForTheNode(int numberOfNode){
-            Node current = head;
-            int index = 0;
-            int counter = 0;
-            while (current != null) {
-                index++;
-                if (current.data.equals(numberOfNode)) {
-                    System.out.println("Node is found at  "+index+" Position ");
-                    counter++;
-                }
-                current = current.next;
-                if(current == null && counter == 0){
-                    System.out.println("Node does not exist");
-                }
-            }
         }
 
+        if (greaterValues.isEmpty()) {
+            greaterValues.printList();
+        }else{
+            greaterValues.printList();
+        }
+        return greaterValues;
 
+    }
+    public void printingNodes(int result,int searchedValue){
+        if (result != -1) {
+            System.out.println("Node " + searchedValue + " is found at " + result + " Position");
+        } else {
+            System.out.println("Node " + searchedValue + " does not exist");
+        }
+    }
+
+
+
+    public int searchForTheNode(int numberOfNode) {
+        Node current = head;
+        int index = 0;
+
+        while (current != null) {
+            index++;
+            if (current.data.equals(numberOfNode)) {
+                return index;// Return the 1-based index where the node is found
+            }
+            current = current.next;
+        }
+        return -1;// Node not found
+    }
 }

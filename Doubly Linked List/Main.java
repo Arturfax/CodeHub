@@ -2,7 +2,7 @@
 public class Main {
 
      public static void main(String[] args) {
-            DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+            DoublyLinkedList list = new DoublyLinkedList();
             list.add(3);
             list.add(5);
             list.add(2);

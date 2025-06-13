@@ -1,9 +1,9 @@
-public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedList<T> {
+public class DoublyLinkedList extends LinkedList{
 
     private class DoublyNode extends Node {
         DoublyNode prev;
 
-        DoublyNode(T data) {
+        DoublyNode(Integer data) {
             super(data);
             this.prev = null;
         }
@@ -12,7 +12,7 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
     private DoublyNode tail;
 
     @Override
-    public void add(T data) {
+    public void add(Integer data) {
         DoublyNode newNode = new DoublyNode(data);
 
         if (head == null) {
@@ -55,7 +55,7 @@ public class DoublyLinkedList<T extends Number & Comparable<T>> extends LinkedLi
     }
 
     @Override
-    public void addAtPosition(int position, T value) {
+    public void addAtPosition(int position, Integer value) {
         if (position < 0) {
             System.out.println("Invalid position");
             return;
